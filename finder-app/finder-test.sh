@@ -63,7 +63,8 @@ do
 #    sh ./writer "$WRITESTR" "$WRITEDIR/${username}$i.txt" 
 done
 
-OUTPUTSTRING=$(sh finder.sh "$WRITEDIR" "$WRITESTR")
+#OUTPUTSTRING=$(sh finder.sh "$WRITEDIR" "$WRITESTR")
+OUTPUTSTRING=$(sh "$(dirname "$0")/finder.sh" "$WRITEDIR" "$WRITESTR")
 
 OUTPUT_FILE="/tmp/assignment4-result.txt"
 
